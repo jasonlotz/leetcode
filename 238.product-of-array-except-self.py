@@ -25,7 +25,6 @@ class Solution:
         for i in range(len(nums) - 1, -1, -1):
             result[i] *= postfix
             postfix *= nums[i]
-            print(result)
 
         return result
 
