@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# Solution #1: Using a set
+# Solution #1: Use a set
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
@@ -19,7 +19,7 @@ class Solution:
             hashset.add(i)
 
 # Solution #1: Sorting first
-# Time complexity: O(n log(n))
+# Time complexity: O(nlo)
 # Space complexity: O(1)
 # class Solution:
 #     def containsDuplicate(self, nums: List[int]) -> bool:

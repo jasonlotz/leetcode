@@ -25,7 +25,7 @@ class Solution:
         return s_dict == t_dict
 
 # Solution #2: Sorting first
-# Time complexity: O(n log(n))
+# Time complexity: O(nlogn)
 # Space complexity: O(1)
 # class Solution:
 #     def isAnagram(self, s: str, t: str) -> bool:

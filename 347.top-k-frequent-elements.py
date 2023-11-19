@@ -7,7 +7,7 @@
 # @lc code=start
 
 # Solution #1: Map + sort
-# Time Complexity: O (n log(n))
+# Time Complexity: O (nlogn)
 # Space Complexity: O(n)
 # class Solution:
 #     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
