@@ -18,6 +18,7 @@ class ListNode:
 
 # Solution: Recursion
 # Time Complexity: O(n + m)
+# Space Complexity: O(n + m)
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         if list1 is None:
