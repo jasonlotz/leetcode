@@ -6,7 +6,7 @@
 
 # @lc code=start
 
-# Solution: Two Pointers
+# Solution: Two pointers
 # Time complexity: O(n)
 # Space complexity: O(1)
 class Solution:
