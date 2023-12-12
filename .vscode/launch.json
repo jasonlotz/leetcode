@@ -16,7 +16,7 @@
           "name": "ts-node: Current File",
           "type": "node",
           "request": "launch",
-          "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/ts-node",
+          "runtimeExecutable": "${workspaceRoot}/typescript/node_modules/.bin/ts-node",
           "runtimeArgs": [
             "--transpile-only",
           ],

@@ -10,7 +10,7 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums: list[int]) -> bool:
         hashset = set()
 
         for i in nums:

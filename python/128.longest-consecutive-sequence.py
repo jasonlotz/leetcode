@@ -6,7 +6,8 @@
 
 # @lc code=start
 
-# Solution #1: Use a set to hold all numbers then iterate over them looking to see which start sequences (no left neighbor)
+# Solution #1:
+#   Use a set to hold all numbers, then iterate over each looking to see which start sequences (no left neighbor)
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
