@@ -11,18 +11,18 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
+  def isAnagram(self, s: str, t: str) -> bool:
+    if len(s) != len(t):
+      return False
 
-        s_dict = {}
-        t_dict = {}
-        for i in s:
-            if i in range(len(s_dict)):
-                s_dict[i] = 1 + s_dict.get(i, 0)
-                t_dict[i] = 1 + t_dict.get(i, 0)
+    s_dict = {}
+    t_dict = {}
+    for i in s:
+      s_dict[i] = 1 + s_dict.get(i, 0)
+    for i in t:
+      t_dict[i] = 1 + t_dict.get(i, 0)
 
-        return s_dict == t_dict
+    return s_dict == t_dict
 
 # Solution #2: Sorting first
 # Time complexity: O(nlogn)
