@@ -18,6 +18,8 @@ class Solution:
         return True
       hashset.add(i)
 
+    return False
+
 # Solution #2: Sorting first
 # Time complexity: O(nlogn)
 # Space complexity: O(1)
