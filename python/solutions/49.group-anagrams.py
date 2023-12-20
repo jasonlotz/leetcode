@@ -27,7 +27,6 @@ class Solution:
         count[ord(c) - ord('a')] += 1
 
       result[tuple(count)].append(s)
-    print(result)
     return result.values()
 
 
