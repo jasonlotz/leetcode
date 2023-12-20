@@ -10,6 +10,7 @@
 #   For each word, create a tuple of 26 elements where each element is the count of the character in the word.
 #   Store the tuple as key in a dictionary and append the word to the list of values for the key.
 #   Return the values of the dictionary.
+#
 # Time complexity: O(m * n) [m = average string length, n = number of strings]
 # Space complexity: O(n)
 from collections import defaultdict
