@@ -16,19 +16,19 @@
 #                 if nums[i] + nums[j] == target:
 #                     return [i, j]
 
-# Solution #2: Use a hashmap
+# Solution #2: Use a dict of complement: index
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 class Solution:
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
-        hashmap = {}
+  def twoSum(self, nums: list[int], target: int) -> list[int]:
+    complement_dict = {}
 
-        for i, value in enumerate(nums):
-            complement = target - value
+    for i, value in enumerate(nums):
+      complement = target - value
 
-            if complement in hashmap:
-                return [hashmap[complement], i]
+      if complement in complement_dict:
+        return [complement_dict[complement], i]
 
-            hashmap[value] = i
+      complement_dict[value] = i
 
 # @lc code=end
