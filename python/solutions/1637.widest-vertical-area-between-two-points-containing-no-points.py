@@ -5,6 +5,10 @@
 #
 
 # @lc code=start
+
+# Solution: Sort the points by x coordinate and find the max difference between two consecutive points.
+# Time complexity: O(nlogn) for sorting
+# Space complexity: O(n) for sorting
 class Solution:
   def maxWidthOfVerticalArea(self, points: list[list[int]]) -> int:
     result = 0
