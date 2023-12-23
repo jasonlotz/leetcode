@@ -10,10 +10,8 @@
 # Space complexity: O(n)
 class Solution:
   def isPathCrossing(self, path: str) -> bool:
-    visited = set()
-
     current_point = [0, 0]
-    visited.add(tuple(current_point))
+    visited = {tuple(current_point)}
 
     for p in path:
       if p == 'N':
