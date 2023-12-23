@@ -9,16 +9,16 @@
 # Time complexity: O(n)
 # Space complexity: O(1)
 class Solution:
-    def longestCommonPrefix(self, strs: list[str]) -> str:
-        prefix = None
+  def longestCommonPrefix(self, strs: list[str]) -> str:
+    prefix = None
 
-        for str in strs:
-            if prefix is None:
-                prefix = str
+    for str in strs:
+      if prefix is None:
+        prefix = str
 
-            while not str.startswith(prefix):
-                prefix = prefix[:-1]
+      while not str.startswith(prefix):
+        prefix = prefix[:-1]
 
-        return prefix if prefix is not None else ""
+    return prefix if prefix is not None else ""
 
 # @lc code=end
