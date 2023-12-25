@@ -5,6 +5,10 @@
 #
 
 # @lc code=start
+
+# Solution: Two-pointers (one at each end) moving whichever is shorter
+# Time complexity: O(n)
+# Space complexity: O(1)
 class Solution:
   def maxArea(self, height: list[int]) -> int:
     max_area = 0
