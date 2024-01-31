@@ -10,15 +10,15 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
-  def containsDuplicate(self, nums: list[int]) -> bool:
-    hashset = set()
+    def containsDuplicate(self, nums: list[int]) -> bool:
+        hashset = set()
 
-    for i in nums:
-      if i in hashset:
-        return True
-      hashset.add(i)
+        for i in nums:
+            if i in hashset:
+                return True
+            hashset.add(i)
 
-    return False
+        return False
 
 # Solution #2: Sorting first
 # Time complexity: O(nlogn)

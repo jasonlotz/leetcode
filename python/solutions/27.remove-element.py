@@ -10,17 +10,17 @@
 # Time complexity: O(n)
 # Space complexity: O(1)
 class Solution:
-  def removeElement(self, nums: list[int], val: int) -> int:
-    if len(nums) == 0:
-      return 0
+    def removeElement(self, nums: list[int], val: int) -> int:
+        if len(nums) == 0:
+            return 0
 
-    left = 0
-    for right in range(0, len(nums)):
-      if nums[right] != val:
-        nums[left] = nums[right]
-        left += 1
+        left = 0
+        for right in range(0, len(nums)):
+            if nums[right] != val:
+                nums[left] = nums[right]
+                left += 1
 
-    return left
+        return left
 
 
 sol = Solution()

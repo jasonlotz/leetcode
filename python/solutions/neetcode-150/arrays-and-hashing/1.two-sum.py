@@ -20,15 +20,15 @@
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 class Solution:
-  def twoSum(self, nums: list[int], target: int) -> list[int]:
-    complement_dict = {}
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        complement_dict = {}
 
-    for i, value in enumerate(nums):
-      complement = target - value
+        for i, value in enumerate(nums):
+            complement = target - value
 
-      if complement in complement_dict:
-        return [complement_dict[complement], i]
+            if complement in complement_dict:
+                return [complement_dict[complement], i]
 
-      complement_dict[value] = i
+            complement_dict[value] = i
 
 # @lc code=end

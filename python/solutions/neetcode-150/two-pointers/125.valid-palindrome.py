@@ -10,28 +10,28 @@
 # Time complexity: O(n)
 # Space complexity: O(1)
 class Solution:
-  def isPalindrome(self, s: str) -> bool:
-    left = 0
-    right = len(s) - 1
+    def isPalindrome(self, s: str) -> bool:
+        left = 0
+        right = len(s) - 1
 
-    lowerString = s.lower()
+        lowerString = s.lower()
 
-    while left < right:
-      if not lowerString[left].isalnum():
-        left += 1
-        continue
+        while left < right:
+            if not lowerString[left].isalnum():
+                left += 1
+                continue
 
-      if not lowerString[right].isalnum():
-        right -= 1
-        continue
+            if not lowerString[right].isalnum():
+                right -= 1
+                continue
 
-      if lowerString[left] != lowerString[right]:
-        return False
+            if lowerString[left] != lowerString[right]:
+                return False
 
-      left += 1
-      right -= 1
+            left += 1
+            right -= 1
 
-    return True
+        return True
 
 
 # Solution 2: Compare two filtered lists

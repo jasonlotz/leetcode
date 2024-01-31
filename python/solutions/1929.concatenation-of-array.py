@@ -10,9 +10,9 @@
 # Time complexity: O(n)
 # Space complexity: O(1)
 class Solution:
-  def getConcatenation(self, nums: list[int]) -> list[int]:
-    for i in range(len(nums)):
-      nums.append(nums[i])
+    def getConcatenation(self, nums: list[int]) -> list[int]:
+        for i in range(len(nums)):
+            nums.append(nums[i])
 
-    return nums
+        return nums
 # @lc code=end

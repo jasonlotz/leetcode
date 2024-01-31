@@ -13,23 +13,23 @@ from collections import defaultdict
 # Time complexity: O(1)
 # Space complexity: O(1)
 class Solution:
-  def isValidSudoku(self, board: list[list[str]]) -> bool:
-    cols = defaultdict(set)
-    rows = defaultdict(set)
-    squares = defaultdict(set)  # key: (row // 3, col // 3)
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
+        cols = defaultdict(set)
+        rows = defaultdict(set)
+        squares = defaultdict(set)  # key: (row // 3, col // 3)
 
-    for r in range(9):
-      for c in range(9):
-        if board[r][c] == ".":
-          continue
+        for r in range(9):
+            for c in range(9):
+                if board[r][c] == ".":
+                    continue
 
-        if board[r][c] in rows[r] or board[r][c] in cols[c] or board[r][c] in squares[(r // 3, c // 3)]:
-          return False
+                if board[r][c] in rows[r] or board[r][c] in cols[c] or board[r][c] in squares[(r // 3, c // 3)]:
+                    return False
 
-        rows[r].add(board[r][c])
-        cols[c].add(board[r][c])
-        squares[(r // 3, c // 3)].add(board[r][c])
+                rows[r].add(board[r][c])
+                cols[c].add(board[r][c])
+                squares[(r // 3, c // 3)].add(board[r][c])
 
-    return True
+        return True
 
 # @lc code=end

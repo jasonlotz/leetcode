@@ -25,25 +25,25 @@
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 class Solution:
-  def topKFrequent(self, nums: list[int], k: int) -> list[int]:
-    # Create a map of number to frequency
-    counts = {}
-    for n in nums:
-      counts[n] = 1 + counts.get(n, 0)
+    def topKFrequent(self, nums: list[int], k: int) -> list[int]:
+        # Create a map of number to frequency
+        counts = {}
+        for n in nums:
+            counts[n] = 1 + counts.get(n, 0)
 
-    # Create a list of lists where index = frequency and value = list of numbers
-    frequency = [[] for i in range(len(nums) + 1)]
-    for num, count in counts.items():
-      frequency[count].append(num)
+        # Create a list of lists where index = frequency and value = list of numbers
+        frequency = [[] for i in range(len(nums) + 1)]
+        for num, count in counts.items():
+            frequency[count].append(num)
 
-    # Iterate through the list of lists in reverse order and append the numbers to the result.
-    # Return the result when the length of the result is equal to k.
-    result = []
-    for i in range(len(frequency) - 1, 0, -1):
-      for n in frequency[i]:
-        result.append(n)
-        if len(result) == k:
-          return result
+        # Iterate through the list of lists in reverse order and append the numbers to the result.
+        # Return the result when the length of the result is equal to k.
+        result = []
+        for i in range(len(frequency) - 1, 0, -1):
+            for n in frequency[i]:
+                result.append(n)
+                if len(result) == k:
+                    return result
 
 
 assert (Solution().topKFrequent([1, 1, 1, 2, 2, 3], 2) == [1, 2])

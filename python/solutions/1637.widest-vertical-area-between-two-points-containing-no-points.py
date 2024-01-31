@@ -10,16 +10,16 @@
 # Time complexity: O(nlogn) for sorting
 # Space complexity: O(n) for sorting
 class Solution:
-  def maxWidthOfVerticalArea(self, points: list[list[int]]) -> int:
-    result = 0
+    def maxWidthOfVerticalArea(self, points: list[list[int]]) -> int:
+        result = 0
 
-    points.sort(key=lambda x: x[0])
+        points.sort(key=lambda x: x[0])
 
-    for i in range(len(points) - 1):
-      width = points[i + 1][0] - points[i][0]
-      result = max(result, width)
+        for i in range(len(points) - 1):
+            width = points[i + 1][0] - points[i][0]
+            result = max(result, width)
 
-    return result
+        return result
 
 
 assert (Solution().maxWidthOfVerticalArea(

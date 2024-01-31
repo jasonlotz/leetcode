@@ -10,20 +10,20 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
-  def isValid(self, s: str) -> bool:
-    stack = []
-    closeToOpenMap = {')': '(', ']': '[', '}': '{'}
+    def isValid(self, s: str) -> bool:
+        stack = []
+        closeToOpenMap = {')': '(', ']': '[', '}': '{'}
 
-    for c in s:
-      if c in closeToOpenMap:
-        if stack and stack[-1] == closeToOpenMap[c]:
-          stack.pop()
-        else:
-          return False
-      else:
-        stack.append(c)
+        for c in s:
+            if c in closeToOpenMap:
+                if stack and stack[-1] == closeToOpenMap[c]:
+                    stack.pop()
+                else:
+                    return False
+            else:
+                stack.append(c)
 
-    return True if not stack else False
+        return True if not stack else False
 
 
 sol = Solution()

@@ -35,22 +35,22 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
-  def productExceptSelf(self, nums: list[int]) -> list[int]:
-    length = len(nums)
-    result = [0] * length
+    def productExceptSelf(self, nums: list[int]) -> list[int]:
+        length = len(nums)
+        result = [0] * length
 
-    # First pass, left to right to compute products of all elements to the left
-    result[0] = 1
-    for i in range(1, length):
-      result[i] = nums[i - 1] * result[i - 1]
+        # First pass, left to right to compute products of all elements to the left
+        result[0] = 1
+        for i in range(1, length):
+            result[i] = nums[i - 1] * result[i - 1]
 
-    # Second pass, right to left to compute the result products while tracking the products of all elements to the right
-    products_to_right = 1
-    for i in reversed(range(length)):
-      result[i] = result[i] * products_to_right
-      products_to_right *= nums[i]
+        # Second pass, right to left to compute the result products while tracking the products of all elements to the right
+        products_to_right = 1
+        for i in reversed(range(length)):
+            result[i] = result[i] * products_to_right
+            products_to_right *= nums[i]
 
-    return result
+        return result
 
 
 assert (Solution().productExceptSelf([1, 2, 3, 4]) == [24, 12, 8, 6])

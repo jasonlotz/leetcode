@@ -10,23 +10,23 @@
 # Time: O(n)
 # Space: O(1)
 class Solution:
-  def minOperations(self, s: str) -> int:
-    start_0_differences = 0
-    start_1_differences = 0
+    def minOperations(self, s: str) -> int:
+        start_0_differences = 0
+        start_1_differences = 0
 
-    for i in range(len(s)):
-      if i % 2 == 0:
-        if s[i] == "0":
-          start_1_differences += 1
-        else:
-          start_0_differences += 1
-      else:
-        if s[i] == "1":
-          start_1_differences += 1
-        else:
-          start_0_differences += 1
+        for i in range(len(s)):
+            if i % 2 == 0:
+                if s[i] == "0":
+                    start_1_differences += 1
+                else:
+                    start_0_differences += 1
+            else:
+                if s[i] == "1":
+                    start_1_differences += 1
+                else:
+                    start_0_differences += 1
 
-    return min(start_1_differences, start_0_differences)
+        return min(start_1_differences, start_0_differences)
 
 
 # Solution 2: Count differences for start with 0 and then

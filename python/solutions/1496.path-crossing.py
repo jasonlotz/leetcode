@@ -9,25 +9,25 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
-  def isPathCrossing(self, path: str) -> bool:
-    current_point = [0, 0]
-    visited = {tuple(current_point)}
+    def isPathCrossing(self, path: str) -> bool:
+        current_point = [0, 0]
+        visited = {tuple(current_point)}
 
-    for p in path:
-      if p == 'N':
-        current_point[1] += 1
-      elif p == 'S':
-        current_point[1] -= 1
-      elif p == 'E':
-        current_point[0] += 1
-      elif p == 'W':
-        current_point[0] -= 1
+        for p in path:
+            if p == 'N':
+                current_point[1] += 1
+            elif p == 'S':
+                current_point[1] -= 1
+            elif p == 'E':
+                current_point[0] += 1
+            elif p == 'W':
+                current_point[0] -= 1
 
-      if tuple(current_point) in visited:
-        return True
-      else:
-        visited.add(tuple(current_point))
+            if tuple(current_point) in visited:
+                return True
+            else:
+                visited.add(tuple(current_point))
 
-    return False
+        return False
 
 # @lc code=end
